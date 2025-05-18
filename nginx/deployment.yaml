@@ -18,17 +18,26 @@ spec:
       containers:
       - name: nginx
         image: nginx:1.14.2
-	volumeMounts:
-	-mountPath: /var/www/html
-	 name: my-volume
-      volumes:
-	- name: my-volume
-	  persistentVolumeClaim:
-	    claimName: my-pvc
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: my-volume
+      volumes:
+        - name : my-volume
+          persistentVolumeClaim:
+          claimName: my-pvc
+
+          
+
+        
 
 
           #In this what we have done is done we have taken in charge the container and have catched it using selectors 
           #(nginx) and then we are just adding the scaling solutions...
+
+
+
+
+
 
