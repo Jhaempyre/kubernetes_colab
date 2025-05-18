@@ -11,4 +11,10 @@ spec:
    - protocol : TCP
      port : 80
      targetPort : 80
-  type : ClusterIP        
+     nodePort: 30080
+  type : NodePort     
+
+
+  #one thing is that while using clusterIp it works fine but for baremetal useing kubeadm then we can't get that from nodes wee need to 
+  #use nodeport for kubeadm for now but best is ingress controller
+      
