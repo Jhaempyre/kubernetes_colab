@@ -4,7 +4,7 @@ metadata:
   name: mysql-service
   namespace: mysql
 spec:
-  clusterIp : None 
+  clusterIP : None 
   selector:
     app: mysql
   ports:
