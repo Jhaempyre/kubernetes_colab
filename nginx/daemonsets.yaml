@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nginx-daemonsets
+  namespace: nginx
+  labels:
+    app: nginx
+spec:
+ 
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+
+          #In this what we have done is crearted daemonsets what it does have a feature like it does 
+          #run the pods on each possible nodes tthe may you have it does scale to that much i guess that
+          #is vewrtical scalling 
