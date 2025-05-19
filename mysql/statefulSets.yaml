@@ -25,7 +25,7 @@ spec:
             - name: MYSQL_DATABASE
               valueFrom:
                 configMapKeyRef:
-                  name: mysql-config-map
+                  name: my-sql-config
                   key: MYSQL_DATABASE
           volumeMounts:
             - name: mysql-data
