@@ -28,5 +28,9 @@ spec:
           limits :
             cpu: 200m
             memory: 225Mi  
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000    
 
 
