@@ -10,4 +10,4 @@ spec:
     - protocol: TCP
       port: 80  #server head 
       targetPort: 80      #container head
-  type: ClusterIp    
+  type: ClusterIP  
